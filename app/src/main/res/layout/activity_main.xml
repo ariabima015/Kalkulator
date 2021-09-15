@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textHitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="32dp"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/textHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="32dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_marginTop="230dp"
+        android:backgroundTint="#E7E7E7"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <ImageButton
+                android:id="@+id/imageButtonAC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="clearOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonSeven"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.333"
+                app:srcCompat="@drawable/ac" />
+
+            <ImageButton
+                android:id="@+id/imageButtonPangkat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="pangkatOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonEight"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonAC"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pangkat" />
+
+            <ImageButton
+                android:id="@+id/imageButtonKurung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="kurungOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonNine"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonPangkat"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/kurung" />
+
+            <ImageButton
+                android:id="@+id/imageButtonDivide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="divideOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonX"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonKurung"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/divide" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="sevenOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonFour"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/seven" />
+
+            <ImageButton
+                android:id="@+id/imageButtonFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="fourOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonOne"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/four" />
+
+            <ImageButton
+                android:id="@+id/imageButtonOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="oneOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonDel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/one" />
+
+            <ImageButton
+                android:id="@+id/imageButtonDel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="19dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="deleteOnClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/del" />
+
+            <ImageButton
+                android:id="@+id/imageButtonEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="eightOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonFive"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonSeven"
+                app:srcCompat="@drawable/eight" />
+
+            <ImageButton
+                android:id="@+id/imageButtonNine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="nineOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonSix"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonEight"
+                app:srcCompat="@drawable/nine" />
+
+            <ImageButton
+                android:id="@+id/imageButtonX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="timesOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonMin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonNine"
+                app:srcCompat="@drawable/x" />
+
+            <ImageButton
+                android:id="@+id/imageButtonFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="fiveOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonTwo"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonFour"
+                app:srcCompat="@drawable/five" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="sixOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonThree"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonFive"
+                app:srcCompat="@drawable/six" />
+
+            <ImageButton
+                android:id="@+id/imageButtonMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="minusOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonPlus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonSix"
+                app:srcCompat="@drawable/min" />
+
+            <ImageButton
+                android:id="@+id/imageButtonTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="twoOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonZero"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonOne"
+                app:srcCompat="@drawable/two" />
+
+            <ImageButton
+                android:id="@+id/imageButtonThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="threeOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonDot"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonTwo"
+                app:srcCompat="@drawable/three" />
+
+            <ImageButton
+                android:id="@+id/imageButtonPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="plusOnClick"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonEqual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonThree"
+                app:srcCompat="@drawable/plus" />
+
+            <ImageButton
+                android:id="@+id/imageButtonZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="zeroOnClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonDel"
+                app:srcCompat="@drawable/zero" />
+
+            <ImageButton
+                android:id="@+id/imageButtonDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="dotOnClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonZero"
+                app:srcCompat="@drawable/dot" />
+
+            <ImageButton
+                android:id="@+id/imageButtonEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="19dp"
+                android:backgroundTint="#E7E7E7"
+                android:onClick="equalOnClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonDot"
+                app:srcCompat="@drawable/equal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
