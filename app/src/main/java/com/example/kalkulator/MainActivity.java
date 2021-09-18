@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void deleteOnClick(View view) {
+        StringBuffer sb= new StringBuffer(hitung);
+        hitung = "";
+        sb.deleteCharAt(sb.length()-1);
+        hitung = String.valueOf(sb);
+        textHitung.setText(hitung);
     }
 
     public void equalOnClick(View view) {
